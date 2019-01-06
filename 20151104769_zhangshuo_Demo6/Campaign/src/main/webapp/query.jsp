@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>    
-    <title>学生竞选管理系统查询页面</title>
+    <title>查询页面</title>
   </head> 
   <body>
   <center>

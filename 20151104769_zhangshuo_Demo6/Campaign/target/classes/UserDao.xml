@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zs.LoginDemo.dao.IUserDao" >
+    <resultMap id="userRM" type="com.zs.LoginDemo.model.User">
+        <!--主键-->
+        <id property="id" column="id" jdbcType="SMALLINT"></id>
+        <!--一般属性-->
+        <result property="username" column="username" jdbcType="VARCHAR"></result>
+        <result property="password" column="password" jdbcType="VARCHAR"></result>
+        <result property="gender" column="gender" jdbcType="VARCHAR"></result>
+        <result property="age" column="age" jdbcType="TINYINT"></result>
+    </resultMap>
+    
+    <!--查询一个用户-->
+    <select id="selectUserByUsernameAndPassword" resultMap="userRM">
+        select * from tb_user where username=#{username} and password = #{password}
+    </select>
+    
+    <!--根据用户名或性别或年龄模糊查询多个用户-->
+    <select id="selectUsersByUsernameOrGenderOrAge" resultMap="userRM" >
+        select * from tb_user
+	    <where>
+	        <if test="username != null and username != ''">
+	          	username LIKE "%"#{username}"%"
+	        </if>
+	        <if test="gender != null and gender != ''" >
+	            AND gender LIKE #{gender}
+	        </if>
+	        <if test="age != null and age != ''">
+	            AND age = #{age}
+	        </if>
+        </where>
+    </select>
+    
+</mapper>

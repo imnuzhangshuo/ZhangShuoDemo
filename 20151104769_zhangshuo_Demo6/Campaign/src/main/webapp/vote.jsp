@@ -14,7 +14,7 @@
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <meta name="description" content="">
 <meta name="author" content="">
-<title>学生竞选管理系统  投票ing</title>
+<title>投票</title>
 <link
     href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css"
     rel="stylesheet">

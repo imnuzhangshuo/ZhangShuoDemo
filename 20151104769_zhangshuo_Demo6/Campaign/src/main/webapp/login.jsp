@@ -9,7 +9,7 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>学生竞选管理系统登录</title>
+    <title>登录</title>
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -21,7 +21,7 @@
         <div class="blog-post form-signin">
             ${message}<br>
             <form action ="${pageContext.request.contextPath}/login" method="post">
-                <h2 class="form-signin-heading">请登录</h2>
+                <h2 class="form-signin-heading">学生竞选管理系统欢迎您！请登录</h2>
                 <label for="username" class="sr-only">user</label>
                 <input type="input" id="inputEmail" class="form-control" name="username" placeholder="用户名" required autofocus>
                 <label for="password" class="sr-only">密码</label>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <footer class="blog-footer">
-      <p>学生竞选管理系统 </p>
+      <p>test的投票系统 </p>
     </footer>
   </body>
 </html>
